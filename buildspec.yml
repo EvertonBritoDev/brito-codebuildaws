@@ -5,12 +5,12 @@ phases:
     runtime-versions:
       nodejs: 20
     commands: 
-      - echo installing dependencioes...
+      - echo Installing dependencies...
       - npm install
   build:
     on-failure: ABORT
     commands:
-      - echo building application ...
+      - echo Building application ...
       - npm run build
   post_build:
     commands: 
