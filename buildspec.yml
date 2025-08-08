@@ -4,16 +4,16 @@ phases:
   install:
     runtime-versions:
       nodejs: 20
-    comands: 
+    commands: 
       - echo installing dependencioes...
       - npm install
   build:
     on-failure: ABORT
-    comands:
+    commands:
       - echo building application ...
       - npm run build
   post_build:
-    comands: 
+    commands: 
       - echo Build completed . Copuing files to s3
       - aws cp dist s3://brito-frontend --recursive
 artifacts:
