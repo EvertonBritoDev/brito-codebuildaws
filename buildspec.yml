@@ -14,8 +14,8 @@ phases:
       - npm run build
   post_build:
     commands: 
-      - echo Build completed . Copuing files to s3
-      - aws cp dist s3://brito-frontend --recursive
+      - echo Build completed. Copuing files to s3
+      - aws cp dist s3://brito-frontend/ --recursive
 artifacts:
   files:
     - '**/*'
